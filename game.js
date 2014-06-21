@@ -20,6 +20,11 @@ window.onload = function(){
     mol.image = core.assets["../images/unit_catch/src/mol.png"];
     mol.moveTo(300, 500);
     mol.addEventListener("touchmove",function(e){
+      if(e.x - this.width/2 > this.x){
+        this.frame = 0;
+      }else{
+        this.frame = 1;
+      }
       this.x = e.x - this.width/2;
       // this.y = e.y - this.height/2;
     });
