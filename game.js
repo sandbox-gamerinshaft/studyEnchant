@@ -14,8 +14,14 @@ window.onload = function(){
   gazou.push("../images/unit_catch/src/title.png");
   core.preload(gazou);
   core.onload = function(){
+
     var gameGamen = new Scene();
     core.pushScene(gameGamen);
+
+    var gameHaikei = new Sprite(DISPLAY_WIDTH, DISPLAY_HEIGHT);
+    gameHaikei.image = core.assets['../images/unit_catch/src/game.png'];
+    gameGamen.addChild(gameHaikei);
+
     var mol = new Sprite(151,169);
     mol.image = core.assets["../images/unit_catch/src/mol.png"];
     mol.moveTo(300, 500);
